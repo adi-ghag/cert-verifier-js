@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll, afterAll, vi } from 'vitest';
-import * as ExplorerLookup from '@blockcerts/explorer-lookup';
+import * as ExplorerLookup from '@adityaghag/explorer-lookup';
 import fixture from '../fixtures/v3/proof-chain-example-secp256k1.json';
 import { Certificate } from '../../src';
 import { universalResolverUrl } from '../../src/domain/did/valueObjects/didResolver';
@@ -13,7 +13,7 @@ describe('Certificate API Contract test suite', function () {
       let instance;
 
       beforeAll(async function () {
-        vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+        vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
           const explorerLookup = await importOriginal();
           return {
             ...explorerLookup,

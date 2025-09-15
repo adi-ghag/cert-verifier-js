@@ -1,4 +1,4 @@
-import { request } from '@blockcerts/explorer-lookup';
+import { request } from '@adityaghag/explorer-lookup';
 import { decodeList } from '@digitalbazaar/vc-revocation-list';
 import { VerifierError } from '../models';
 import { SUB_STEPS } from '../domain/verifier/entities/verificationSteps';

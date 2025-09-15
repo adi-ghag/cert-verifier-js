@@ -9,7 +9,7 @@ describe('End-to-end i18n test suite', function () {
     let verificationResult;
 
     beforeAll(async function () {
-      vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+      vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
         const explorerLookup = await importOriginal();
         return {
           ...explorerLookup,

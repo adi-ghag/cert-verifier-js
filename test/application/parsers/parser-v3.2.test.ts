@@ -8,7 +8,7 @@ import v3IssuerProfile from '../../fixtures/issuer-blockcerts.json';
 describe('Parser v3 test suite', function () {
   describe('given it is called with valid v3.2 certificate data', function () {
     beforeAll(function () {
-      vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+      vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
         const explorerLookup = await importOriginal();
         return {
           ...explorerLookup,

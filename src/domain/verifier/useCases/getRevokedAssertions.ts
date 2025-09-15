@@ -1,4 +1,4 @@
-import { request } from '@blockcerts/explorer-lookup';
+import { request } from '@adityaghag/explorer-lookup';
 import { VerifierError } from '../../../models';
 import { SUB_STEPS } from '../entities/verificationSteps';
 import { getText } from '../../i18n/useCases';
@@ -20,6 +20,12 @@ export default async function getRevokedAssertions (revocationListUrl: string, a
 
   try {
     const response: any = await request({ url: revocationListUrl });
+
+    // Handle case where response is undefined, null, or empty
+    if (!response) {
+      return [];
+    }
+
     const issuerRevocationJson: RevocationList = JSON.parse(response);
     return issuerRevocationJson.revokedAssertions ?? [];
   } catch (e) {

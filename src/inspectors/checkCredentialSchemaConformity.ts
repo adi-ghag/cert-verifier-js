@@ -1,5 +1,5 @@
 import { validator } from '@exodus/schemasafe';
-import { request } from '@blockcerts/explorer-lookup';
+import { request } from '@adityaghag/explorer-lookup';
 import { VerifierError } from '../models';
 import { SUB_STEPS } from '../domain/verifier/entities/verificationSteps';
 import { getText } from '../domain/i18n/useCases';

@@ -1,7 +1,11 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import domain from '../../../../../src/domain';
 
-global.navigator = {} as any;
+// Mock navigator for tests
+Object.defineProperty(global, 'navigator', {
+  value: {},
+  writable: true
+});
 
 describe('domain i18n detectLocale use case test suite', function () {
   describe('given it detected the navigator locale', function () {

@@ -22,7 +22,7 @@ import { describe } from 'vitest';
 describe.todo('given the certificate is signed by a revoked EcdsaSecp256k12019 verification method', function () {
   // this test will expire in 2039
   // it('should fail verification', async function () {
-  //   vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+  //   vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
   //     const explorerLookup = await importOriginal();
   //     return {
   //       ...explorerLookup,

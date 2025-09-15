@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import domain from '../../../../../src/domain/index';
-import { BLOCKCHAINS } from '@blockcerts/explorer-lookup';
+import { BLOCKCHAINS } from '@adityaghag/explorer-lookup';
 
 describe('domain certificates get chain use case test suite', function () {
   describe('given it is called with a signature with anchors', function () {

@@ -6,7 +6,7 @@ import { universalResolverUrl } from '../../src/domain/did/valueObjects/didResol
 import didDocument from '../fixtures/did/did:ion:EiA_Z6LQILbB2zj_eVrqfQ2xDm4HNqeJUw5Kj2Z7bFOOeQ.json';
 import fixtureIssuerProfile from '../fixtures/issuer-blockcerts.json';
 import v3RevocationList from '../assertions/v3-revocation-list';
-import * as ExplorerLookup from '@blockcerts/explorer-lookup';
+import * as ExplorerLookup from '@adityaghag/explorer-lookup';
 
 describe('Certificate API Contract test suite', function () {
   describe('signers property', function () {
@@ -14,7 +14,7 @@ describe('Certificate API Contract test suite', function () {
       let instance;
 
       beforeAll(async function () {
-        vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+        vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
           const explorerLookup = await importOriginal();
           return {
             ...explorerLookup,

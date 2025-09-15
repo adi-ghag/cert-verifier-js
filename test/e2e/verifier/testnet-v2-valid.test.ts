@@ -5,7 +5,7 @@ import issuerBlockcertsV2a from '../../fixtures/issuer-blockcerts-v2a.json';
 
 describe('given the certificate is a valid testnet (v2.0)', function () {
   it('should verify successfully', async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

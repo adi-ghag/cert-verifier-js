@@ -11,7 +11,7 @@ modifiedIssuerProfile.verificationMethod = publicKeys;
 
 describe('Proof verification method is not referenced in issuer profile test suite', function () {
   it('Should fail when init with helpful error message', async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

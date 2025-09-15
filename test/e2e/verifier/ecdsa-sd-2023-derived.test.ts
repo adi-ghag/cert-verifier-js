@@ -5,7 +5,7 @@ import fixtureIssuerProfile from '../../fixtures/issuer-blockcerts.json';
 
 describe('ecdsa-sd-2023 signed and derived document test suite', function () {
   beforeAll(function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

@@ -6,7 +6,7 @@ import MocknetV3Valid from '../../fixtures/v3/mocknet-v3-valid.json';
 
 describe('given the certificate is a valid mocknet (v3.0)', function () {
   it('should verify successfully', async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

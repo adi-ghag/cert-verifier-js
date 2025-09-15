@@ -8,7 +8,7 @@ describe('given the certificate is an expired validUntil', function () {
   let result;
 
   beforeAll(async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

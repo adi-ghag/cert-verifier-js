@@ -7,7 +7,7 @@ import fixtureCredentialSchema from '../../fixtures/credential-schema-example-id
 
 describe('given the certificate is a valid mocknet (v3.2)', function () {
   beforeAll(function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

@@ -1,11 +1,11 @@
-import { LDMerkleProof2019 } from 'jsonld-signatures-merkleproof2019';
+import { LDMerkleProof2019 } from '@adityaghag/jsonld-signatures-merkleproof2019';
 import * as inspectors from '../inspectors';
 import domain from '../domain';
 import { Suite } from '../models/Suite';
 import { isDidUri } from '../domain/verifier/useCases/getIssuerProfile';
 import { getVCProofVerificationMethod } from '../models/BlockcertsV3';
 import { removeEntry } from '../helpers/array';
-import type { ExplorerAPI, TransactionData, IBlockchainObject } from '@blockcerts/explorer-lookup';
+import type { ExplorerAPI, TransactionData, IBlockchainObject } from '@adityaghag/explorer-lookup';
 import type { Receipt } from '../models/Receipt';
 import type { Issuer, IssuerPublicKeyList } from '../models/Issuer';
 import type { BlockcertsV3, VCProof } from '../models/BlockcertsV3';

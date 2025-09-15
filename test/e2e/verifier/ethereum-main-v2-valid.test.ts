@@ -4,7 +4,7 @@ import EthereumMainV2Valid from '../../fixtures/v2/ethereum-main-valid-2.0.json'
 
 describe('given the certificate is a valid ethereum main', function () {
   it('should verify successfully', async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

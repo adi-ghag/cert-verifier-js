@@ -21,7 +21,7 @@ import { describe } from 'vitest';
 // TODO: we need to create a fixture file signed by a VM referenced in the blockcerts Issuer Profile
 describe.todo('given the certificate is signed by a revoked Ed25519Signature2020 verification method', function () {
   // it('should fail verification', async function () {
-  //   vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+  //   vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
   //     const explorerLookup = await importOriginal();
   //     return {
   //       ...explorerLookup,
