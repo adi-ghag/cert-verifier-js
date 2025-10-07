@@ -1,11 +1,30 @@
 test/
 config/
+src/
 
 index.html
 *.yml
 *.config.js
+*.config.mjs
+*.config.ts
 .babelrc
 .nvmrc
 .github/
+.husky/
 
 .idea
+.vscode
+.DS_Store
+
+tsconfig.json
+vitest.config.ts
+karma.conf.js
+
+# Keep only dist folder
+node_modules/
+coverage/
+
+# Example and test files
+example-usage.js
+verify-certificate.js
+CLAUDE.md

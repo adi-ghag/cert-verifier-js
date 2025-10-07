@@ -1,10 +1,10 @@
 {
-  "name": "@blockcerts/cert-verifier-js",
-  "version": "0.0.0-dev",
+  "name": "@adityaghag/cert-verifier-js",
+  "version": "1.0.0",
   "description": "Javascript library for verifying Blockcerts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/blockchain-certificates/cert-verifier-js.git"
+    "url": "https://github.com/adi-ghag/cert-verifier-js.git"
   },
   "main": "dist/verifier/index.js",
   "module": "dist/verifier-es/index.js",
@@ -38,15 +38,11 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "Kim Duffy",
-  "maintainers": [
-    "Matthieu Collé",
-    "Julien Fraichot"
-  ],
+  "author": "Adi Ghag",
   "license": "MIT",
   "dependencies": {
-    "@adityaghag/explorer-lookup": "^1.1.1",
-    "@adityaghag/jsonld-signatures-merkleproof2019": "^1.1.0",
+    "@adityaghag/explorer-lookup": "1.2.0",
+    "@adityaghag/jsonld-signatures-merkleproof2019": "1.2.0",
     "@blockcerts/ecdsa-secp256k1-signature-2019": "^0.1.8",
     "@blockcerts/ecdsa-secp256k1-verification-key-2019": "^0.1.9",
     "@blockcerts/hashlink-verifier": "^2.0.0",
@@ -67,7 +63,7 @@
     "base64url-universal": "^2.0.0",
     "bs58": "^6.0.0",
     "buffer": "^6.0.3",
-    "jsonld": "^8.3.2",
+    "jsonld": "8.3.3",
     "jsonld-checker": "npm:@blockcerts/jsonld-checker@^0.1.9",
     "jsonld-signatures": "^11.5.0",
     "lodash.clonedeep": "^4.5.0",

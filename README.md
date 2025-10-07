@@ -4,9 +4,14 @@
 [![codecov](https://codecov.io/gh/blockchain-certificates/cert-verifier-js/branch/master/graph/badge.svg)](https://codecov.io/gh/blockchain-certificates/cert-verifier-js)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-# @blockcerts/cert-verifier-js
+# @adityaghag/cert-verifier-js
 
 A library to parse and verify [Blockcerts](https://www.blockcerts.org/) certificates.
+
+**Fork with enhanced blockchain support:**
+- ✅ Arbitrum One (mainnet)
+- ✅ Arbitrum Sepolia (testnet)
+- ✅ bloxberg
 
 IMPORTANT NOTE: as of version 5 of this library, v1 blockcerts are not supported anymore. Use https://www.npmjs.com/package/@blockcerts/cert-verifier-js-v1-legacy if needed.
 
@@ -15,7 +20,7 @@ IMPORTANT NOTE: as of version 5 of this library, v1 blockcerts are not supported
 ## Install
 
 ```shell
-$ npm i @blockcerts/cert-verifier-js
+$ npm i @adityaghag/cert-verifier-js
 ```
 
 ## Import
@@ -26,7 +31,7 @@ While you would import the `Certificate` constructor and instantiate identically
 
 Example:
 ```javascript
-import { Certificate } from '@blockcerts/cert-verifier-js';
+import { Certificate } from '@adityaghag/cert-verifier-js';
 let certificate = new Certificate(certificateDefinition);
 await certificate.init();
 ```  
@@ -36,21 +41,21 @@ await certificate.init();
 Exposed by default:
 
 ```javascript
-const { Certificate } = require('@blockcerts/cert-verifier-js');
+const { Certificate } = require('@adityaghag/cert-verifier-js');
 var certificate = new Certificate(certificateDefinition);
 await certificate.init();
 ```
 
 ### Running in Nodejs
 ```javascript
-const { Certificate } = require('@blockcerts/cert-verifier-js/dist/verifier-node.js');
+const { Certificate } = require('@adityaghag/cert-verifier-js/dist/verifier-node.js');
 var certificate = new Certificate(certificateDefinition);
 await certificate.init();
 ```
 
 #### ES module
 ```javascript
-import { Certificate } from '@blockcerts/cert-verifier-js';
+import { Certificate } from '@adityaghag/cert-verifier-js';
 let certificate = new Certificate(certificateDefinition);
 await certificate.init();
 ```
