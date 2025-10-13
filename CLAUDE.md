@@ -12,6 +12,21 @@ This is `@blockcerts/cert-verifier-js`, a JavaScript/TypeScript library for pars
 
 The library runs in browser, Node.js, and ESM environments.
 
+### Supported Blockchains
+
+**This package uses custom forks with extended blockchain support:**
+- `@adityaghag/explorer-lookup` v1.2.1 (fork of @blockcerts/explorer-lookup)
+- `@adityaghag/jsonld-signatures-merkleproof2019` v1.2.2 (fork of jsonld-signatures-merkleproof2019)
+
+**Supported chains include:**
+- Bitcoin: Mainnet, Testnet, Regtest
+- Ethereum: Mainnet, Ropsten, Rinkeby, Goerli, Sepolia
+- **Arbitrum: Arbitrum One (mainnet), Arbitrum Sepolia (testnet)** ✨ NEW
+- **bloxberg: Academic/research blockchain network** ✨ NEW
+- Mocknet: Testing/development
+
+See `BLOCKCHAIN_SUPPORT.md` for detailed information about blockchain support and usage.
+
 ## Common Commands
 
 ### Testing
