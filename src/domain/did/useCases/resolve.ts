@@ -1,5 +1,5 @@
 import type { IDidDocument } from '../../../models/DidDocument';
-import { request } from '@blockcerts/explorer-lookup';
+import { request } from '@adityaghag/explorer-lookup';
 import DidResolver from '../valueObjects/didResolver';
 import { isDidKey } from '../../verifier/useCases/getIssuerProfile';
 import resolveDidKeyDocument from './resolveDidKeyDocument';

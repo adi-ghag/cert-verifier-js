@@ -1,3 +1,3 @@
-import { lookForTx } from '@blockcerts/explorer-lookup';
+import { lookForTx } from '@adityaghag/explorer-lookup';
 
 export default lookForTx;

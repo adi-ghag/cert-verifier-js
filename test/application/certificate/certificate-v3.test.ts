@@ -13,7 +13,7 @@ describe('Certificate entity test suite', function () {
   const fixture = BlockcertsV3;
 
   beforeAll(function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

@@ -5,7 +5,7 @@ import fixtureIssuerProfile from '../../fixtures/issuer-blockcerts.json';
 
 describe('Proof verification method is bound to issuer profile test suite', function () {
   it('should verify', async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

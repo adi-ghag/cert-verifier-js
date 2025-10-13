@@ -9,7 +9,7 @@ describe('given the certificate is a not yet valid mocknet', function () {
 
   // this test will expire in 2039
   beforeAll(async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

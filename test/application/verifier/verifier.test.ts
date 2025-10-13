@@ -1,13 +1,13 @@
 import { describe, it, expect, beforeEach, afterEach, beforeAll, afterAll, vi } from 'vitest';
 import { HashlinkVerifier } from '@blockcerts/hashlink-verifier';
 import { VERIFICATION_STATUSES } from '../../../src';
-import { BLOCKCHAINS } from '@blockcerts/explorer-lookup';
+import { BLOCKCHAINS } from '@adityaghag/explorer-lookup';
 import Verifier from '../../../src/verifier';
 import { deepCopy } from '../../../src/helpers/object';
 import didDocument from '../../fixtures/did/did:ion:EiA_Z6LQILbB2zj_eVrqfQ2xDm4HNqeJUw5Kj2Z7bFOOeQ.json';
 import { SUB_STEPS, VerificationSteps } from '../../../src/domain/verifier/entities/verificationSteps';
 import verificationStepsV2Mainnet from '../../assertions/verification-steps-v2-mainnet';
-import type { ExplorerAPI } from '@blockcerts/explorer-lookup';
+import type { ExplorerAPI } from '@adityaghag/explorer-lookup';
 import type { IVerificationMapItem } from '../../../src/models/VerificationMap';
 import fixtureBlockcertsIssuerProfile from '../../fixtures/issuer-blockcerts.json';
 import fixtureMainnetIssuerProfile from '../../fixtures/issuer-profile-mainnet-example.json';
@@ -33,7 +33,7 @@ describe('Verifier entity test suite', function () {
   };
 
   beforeAll(function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

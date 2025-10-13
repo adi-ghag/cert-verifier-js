@@ -3,7 +3,7 @@ import domain from '../domain';
 import { removeEntry } from '../helpers/array';
 import { Suite } from '../models/Suite';
 import type { Blockcerts } from '../models/Blockcerts';
-import type { ExplorerAPI, TransactionData, IBlockchainObject } from '@blockcerts/explorer-lookup';
+import type { ExplorerAPI, TransactionData, IBlockchainObject } from '@adityaghag/explorer-lookup';
 import type { Receipt } from '../models/Receipt';
 import type { Issuer, IssuerPublicKeyList } from '../models/Issuer';
 import type { BlockcertsV2 } from '../models/BlockcertsV2';

@@ -10,7 +10,7 @@ const errorMessageAssertion = 'Unable to get revocation assertions';
 
 describe('Verifier domain getRevokedAssertions use case test suite', function () {
   beforeAll(function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

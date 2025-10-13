@@ -8,7 +8,7 @@ import fixtureIssuerProfile from '../fixtures/issuer-profile.json';
 
 describe('when the certificate verified', function () {
   beforeAll(function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

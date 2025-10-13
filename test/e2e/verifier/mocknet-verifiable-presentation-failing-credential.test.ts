@@ -6,7 +6,7 @@ import { Certificate, VERIFICATION_STATUSES } from '../../../src';
 
 describe('Verifiable Presentation test suite', function () {
   beforeAll(function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

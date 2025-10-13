@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll, afterAll, vi } from 'vitest';
 import sinon from 'sinon';
-import * as ExplorerLookup from '@blockcerts/explorer-lookup';
+import * as ExplorerLookup from '@adityaghag/explorer-lookup';
 import { Certificate } from '../../src';
 import MainnetV2Valid from '../fixtures/v2/mainnet-valid-2.0.json';
 import v2IssuerProfile from '../assertions/v2-issuer-profile-5a4fe9931f607f0f3452a65e.json';
@@ -11,7 +11,7 @@ describe('Certificate API Contract test suite', function () {
       let instance;
 
       beforeAll(async function () {
-        vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+        vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
           const explorerLookup = await importOriginal();
           return {
             ...explorerLookup,

@@ -6,7 +6,7 @@ import fixtureBlockcertsIssuerProfile from '../../fixtures/issuer-blockcerts.jso
 describe('given the proofPurpose of the certificate\'s proof does not match the verifier\'s purpose', function () {
   // this test will expire in 2039
   it('should fail verification', async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

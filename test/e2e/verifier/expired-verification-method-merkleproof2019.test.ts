@@ -21,7 +21,7 @@ function getIssuerProfileResponse (): string {
 describe('given the certificate is signed by an expired MerkleProof2019 verification method', function () {
   // this test will expire in 2039
   it('should fail verification', async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

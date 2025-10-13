@@ -12,7 +12,7 @@ const notFoundListUrl = 'https://www.blockcerts.org/samples/3.0/status-list-2021
 
 describe('checkRevocationStatusList2021 inspector test suite', function () {
   beforeAll(function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

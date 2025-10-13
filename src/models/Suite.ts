@@ -1,7 +1,7 @@
 import type VerificationSubstep from '../domain/verifier/valueObjects/VerificationSubstep';
 import type { Receipt } from './Receipt';
 import type { Blockcerts } from './Blockcerts';
-import type { ExplorerAPI, IBlockchainObject } from '@blockcerts/explorer-lookup';
+import type { ExplorerAPI, IBlockchainObject } from '@adityaghag/explorer-lookup';
 import type { Issuer } from './Issuer';
 import type { VCProof } from './BlockcertsV3';
 import type { MerkleProof2017 } from './MerkleProof2017';

@@ -1,5 +1,5 @@
 import { TRANSACTION_ID_PLACEHOLDER } from '../../../constants';
-import type { IBlockchainObject } from '@blockcerts/explorer-lookup';
+import type { IBlockchainObject } from '@adityaghag/explorer-lookup';
 
 /**
  * getRawTransactionLink

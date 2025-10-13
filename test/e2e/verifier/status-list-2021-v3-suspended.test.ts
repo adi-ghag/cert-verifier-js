@@ -9,7 +9,7 @@ describe('Status List 2021 v3 suspended example', function () {
   let result;
 
   beforeAll(async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

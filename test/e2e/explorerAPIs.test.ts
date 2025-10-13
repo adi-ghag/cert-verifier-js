@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import type { ExplorerAPI } from '@blockcerts/explorer-lookup';
+import type { ExplorerAPI } from '@adityaghag/explorer-lookup';
 import Certificate from '../../src/certificate';
 import { universalResolverUrl } from '../../src/domain/did/valueObjects/didResolver';
 import BlockcertsV3 from '../fixtures/v3/testnet-v3-did.json';
@@ -26,7 +26,7 @@ describe('explorerAPIs end to end test suite', function () {
           parsingFunction: parsingFunctionSpy
         };
 
-        vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+        vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
           const explorerLookup = await importOriginal();
           return {
             ...explorerLookup,

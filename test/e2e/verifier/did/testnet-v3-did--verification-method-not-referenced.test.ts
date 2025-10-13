@@ -9,7 +9,7 @@ describe('Blockcerts v3 beta signed with DID test suite', function () {
   describe('given the proof holds a verification method', function () {
     describe('and the verification method is not listed in the issuer\'s DID document', function () {
       it('should fail verification', async function () {
-        vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+        vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
           const explorerLookup = await importOriginal();
           return {
             ...explorerLookup,

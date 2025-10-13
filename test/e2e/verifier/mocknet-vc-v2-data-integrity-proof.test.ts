@@ -5,7 +5,7 @@ import fixtureBlockcertsIssuerProfile from '../../fixtures/issuer-blockcerts.jso
 
 describe('given the certificate is signed with a DataIntegrityProof Merkle Proof 2019', function () {
   it('should be a valid verification', async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

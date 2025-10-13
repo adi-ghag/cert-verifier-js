@@ -23,7 +23,7 @@ import BlockcertsV3CredentialSchema from '../fixtures/v3/mocknet-vc-v2-credentia
 describe('Certificate API Contract test suite', function () {
   describe('verificationSteps property', function () {
     beforeAll(function () {
-      vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+      vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
         const explorerLookup = await importOriginal();
         return {
           ...explorerLookup,

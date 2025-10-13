@@ -6,7 +6,7 @@ import { VerifierError } from './models';
 import { getText } from './domain/i18n/useCases';
 import { difference } from './helpers/array';
 import { getVCProofVerificationMethod, isVerifiablePresentation } from './models/BlockcertsV3';
-import type { ExplorerAPI, TransactionData } from '@blockcerts/explorer-lookup';
+import type { ExplorerAPI, TransactionData } from '@adityaghag/explorer-lookup';
 import type { HashlinkVerifier } from '@blockcerts/hashlink-verifier';
 import type { Blockcerts } from './models/Blockcerts';
 import type { Issuer } from './models/Issuer';

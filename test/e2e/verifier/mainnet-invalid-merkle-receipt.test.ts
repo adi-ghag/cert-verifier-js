@@ -8,7 +8,7 @@ describe('given the certificate is a mainnet with an invalid merkle receipt', fu
   let result;
 
   beforeAll(async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

@@ -10,7 +10,7 @@ import didKeyDocument from '../../../../fixtures/did/did:key:z6MkjHnntGvtLjwfAMH
 describe('Verifier domain getIssuerProfile use case test suite', function () {
   describe('given the issuer profile refers to a DID', function () {
     beforeAll(async function () {
-      vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+      vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
         const explorerLookup = await importOriginal();
         return {
           ...explorerLookup,

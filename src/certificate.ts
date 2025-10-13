@@ -7,7 +7,7 @@ import { DEFAULT_OPTIONS } from './constants';
 import { deepCopy } from './helpers/object';
 import convertHashlink, { getHashlinksFrom } from './parsers/helpers/convertHashlink';
 import type { HashlinkVerifier } from '@blockcerts/hashlink-verifier';
-import type { ExplorerAPI, IBlockchainObject } from '@blockcerts/explorer-lookup';
+import type { ExplorerAPI, IBlockchainObject } from '@adityaghag/explorer-lookup';
 import type { Blockcerts } from './models/Blockcerts';
 import type { Issuer } from './models/Issuer';
 import type { SignatureImage } from './models';

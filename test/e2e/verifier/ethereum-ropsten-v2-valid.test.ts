@@ -4,7 +4,7 @@ import EthereumRopstenV2Valid from '../../fixtures/v2/ethereum-ropsten-valid-2.0
 
 describe('given the certificate is a valid ethereum ropsten', function () {
   it('should verify successfully', async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,

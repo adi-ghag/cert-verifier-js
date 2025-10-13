@@ -8,7 +8,7 @@ describe('given the certificate is a testnet with tampered hashes', function () 
   let result;
 
   beforeAll(async function () {
-    vi.mock('@blockcerts/explorer-lookup', async (importOriginal) => {
+    vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
       const explorerLookup = await importOriginal();
       return {
         ...explorerLookup,
