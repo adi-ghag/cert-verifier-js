@@ -18,6 +18,7 @@ import type IVerificationMethod from '../models/VerificationMethod';
 enum SUB_STEPS {
   getTransactionId = 'getTransactionId',
   computeLocalHash = 'computeLocalHash',
+  computeLocalHashForBloxberg = 'computeLocalHashForBloxberg',
   fetchRemoteHash = 'fetchRemoteHash',
   parseIssuerKeys = 'parseIssuerKeys',
   compareHashes = 'compareHashes',
@@ -80,7 +81,31 @@ export default class MerkleProof2019 extends Suite {
   async init (): Promise<void> {
     await this.setVerificationSuite();
     this.chain = this.suite.getChain();
+    // Manually trigger bloxberg adaptation in the external suite before we register steps
+    // The external suite would normally do this in verifyProof(), but we need it earlier
+    // so that getProofVerificationSteps() returns the adapted steps
+    this.triggerExternalSuiteAdaptation();
     this.adaptVerificationProcessToChain();
+  }
+
+  private triggerExternalSuiteAdaptation (): void {
+    // Check if this is a bloxberg-like chain and manually adapt the external suite's process
+    if (this.chain && this.shouldUseBloxbergHash()) {
+      // Access the external suite's process array and adapt it
+      const externalProcess = this.suite['proofVerificationProcess'];
+      if (externalProcess && Array.isArray(externalProcess)) {
+        const index = externalProcess.indexOf('computeLocalHash');
+        if (index !== -1) {
+          externalProcess[index] = 'computeLocalHashForBloxberg';
+        }
+      }
+    }
+  }
+
+  private shouldUseBloxbergHash (): boolean {
+    if (!this.chain) return false;
+    const bloxbergChains = ['ethbloxberg', 'arbitrumOne', 'arbitrumSepolia', 'arbitrumsepolia'];
+    return bloxbergChains.includes(this.chain.code);
   }
 
   async verifyProof (): Promise<void> {

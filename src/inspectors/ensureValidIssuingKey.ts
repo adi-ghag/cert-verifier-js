@@ -5,9 +5,15 @@ import type { IssuerPublicKeyList, ParsedKeyObjectV2 } from '../models/Issuer';
 
 function getCaseInsensitiveKey (obj: IssuerPublicKeyList, value: string): ParsedKeyObjectV2 {
   let key = null;
+  // Strip prefix from value if present (e.g., "ethereum-pubkey:0x..." -> "0x...")
+  const valueWithoutPrefix = value.includes(':') ? value.split(':').pop() : value;
+
   for (const prop in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, prop)) {
-      if (prop.toLowerCase() === value.toLowerCase()) {
+      // Strip prefix from property if present
+      const propWithoutPrefix = prop.includes(':') ? prop.split(':').pop() : prop;
+
+      if (propWithoutPrefix.toLowerCase() === valueWithoutPrefix.toLowerCase()) {
         key = prop;
       }
     }
