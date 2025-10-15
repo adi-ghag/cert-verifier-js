@@ -266,7 +266,7 @@ The expected shape of the object is as follows:
 More information on each item:
 - `serviceName`: when a consumer wants to overwrite some information of the default explorer APIs provided (for instance provide their own keys to the service API), they should match the name of that API service with this property.
 - `key`: the explorer service API key value.
-- `keyPropertyName`: the expected parameter name to hold the key value. Depends on each service. (ie: Etherscan: "apiKey", Blockcypher: "token", etc). Required when a key is passed. 
+- `keyPropertyName`: the expected parameter name to hold the key value. Depends on each service. (ie: Etherscan: "apiKey", etc). Required when a key is passed. 
 - `serviceURL`: when set to `string` will be assumed to be set for the `mainnet` of the Blockchain.
 When set to an object, the customer will be able to provide a service url for the `mainnet` and for the `testnet` versions of the blockchain.
 The object is then shaped as such:

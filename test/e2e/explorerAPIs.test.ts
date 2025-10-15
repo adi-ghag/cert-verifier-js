@@ -34,7 +34,6 @@ describe('explorerAPIs end to end test suite', function () {
             request: async function ({ url }) {
               switch (url) {
                 case 'https://blockcerts.org/test':
-                case 'https://api.blockcypher.com/v1/btc/test3/txs/140ee9382a5c84433b9c89a5d9fea26c47415838b5841deb0c36a8a4b9121f2e?limit=500':
                 case 'https://blockstream.info/testnet/api/tx/140ee9382a5c84433b9c89a5d9fea26c47415838b5841deb0c36a8a4b9121f2e':
                   return '{}';
 

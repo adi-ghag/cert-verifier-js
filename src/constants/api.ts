@@ -1,5 +1,4 @@
 enum TRANSACTION_APIS {
-  blockcypher = 'blockcypher',
   blockstream = 'blockstream',
   etherscan = 'etherscan'
 }
