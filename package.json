@@ -1,6 +1,6 @@
 {
   "name": "@adityaghag/cert-verifier-js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Javascript library for verifying Blockcerts",
   "repository": {
     "type": "git",
